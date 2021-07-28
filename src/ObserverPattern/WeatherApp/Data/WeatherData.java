@@ -28,7 +28,7 @@ public class WeatherData {
 
     public void notifyObservers() {
         for (Observer observer : observers) {
-            observer.update(temperature, humidity, pressure);
+            observer.update();
         }
     }
 

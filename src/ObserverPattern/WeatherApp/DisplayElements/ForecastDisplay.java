@@ -14,12 +14,6 @@ public class ForecastDisplay implements Observer, DisplayElement {
         weatherData.registerObserver(this);
     }
 
-    public void update(float temp, float humidity, float pressure) {
-        lastPressure = currentPressure;
-        currentPressure = pressure;
-
-        display();
-    }
 
     public void display() {
         System.out.print("Forecast: ");
@@ -30,5 +24,12 @@ public class ForecastDisplay implements Observer, DisplayElement {
         } else if (currentPressure < lastPressure) {
             System.out.println("Watch out for cooler, rainy weather");
         }
+    }
+
+    @Override
+    public void update() {
+        lastPressure = currentPressure;
+        currentPressure = weatherData.getPressure();
+        display();
     }
 }
