@@ -1,19 +1,19 @@
 package CommandPattern.Example;
 
-public class LightOnCommand implements Command {
+public class HallLightOffCommand implements Command {
     Light light;
 
-    public LightOnCommand(Light light) {
+    public HallLightOffCommand(Light light) {
         this.light = light;
     }
 
     @Override
     public void execute() {
-        light.on();
+        light.off();
     }
 
     @Override
     public void undo() {
-        light.off();
+        light.on();
     }
 }

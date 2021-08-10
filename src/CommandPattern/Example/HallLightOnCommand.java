@@ -1,9 +1,9 @@
 package CommandPattern.Example;
 
-public class LightOnCommand implements Command {
+public class HallLightOnCommand implements Command{
     Light light;
 
-    public LightOnCommand(Light light) {
+    public HallLightOnCommand(Light light) {
         this.light = light;
     }
 
