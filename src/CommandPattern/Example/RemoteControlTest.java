@@ -43,12 +43,5 @@ public class RemoteControlTest {
         System.out.println(acRemoteControl);
         acRemoteControl.undoButtonWasPressed();
 
-//        remoteControl.onButtonWasPushed(0);
-//        remoteControl.offButtonWasPushed(0);
-//        System.out.println(remoteControl);
-//        remoteControl.undoButtonWasPushed();
-//        remoteControl.onButtonWasPushed(1);
-//        System.out.println(remoteControl);
-//        remoteControl.undoButtonWasPushed();
     }
 }
