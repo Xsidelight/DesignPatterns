@@ -43,5 +43,21 @@ public class RemoteControlTest {
         System.out.println(acRemoteControl);
         acRemoteControl.undoButtonWasPressed();
 
+        Command[] multipleOnCommandExecution = {garageDoorOpenCommand, hallLightOnCommand};
+        Command[] multipleOffCommandExecution = {acOffCommand, hallLightOffCommand};
+
+
+        System.out.println("--------------------------");
+
+        MacroCommand testMacroOnCommand = new MacroCommand(multipleOnCommandExecution);
+        MacroCommand testMacroOffCommand = new MacroCommand(multipleOffCommandExecution);
+
+        remoteControl.setCommand(0, testMacroOnCommand, testMacroOffCommand);
+        remoteControl.onButtonWasPushed(0);
+
+        System.out.println("--------------------------");
+
+        remoteControl.offButtonWasPushed(0);
+
     }
 }
