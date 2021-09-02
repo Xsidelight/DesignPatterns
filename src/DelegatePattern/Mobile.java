@@ -1,2 +1,5 @@
-package DelegatePattern;public interface Mobile {
+package DelegatePattern;
+
+public interface Mobile {
+    void dial(final String number);
 }
